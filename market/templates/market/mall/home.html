@@ -1,0 +1,363 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{% load staticfiles %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
+
+    <title>首页</title>
+
+    <link href='{%static "AmazeUI-2.4.2/assets/css/admin.css" %}' rel="stylesheet" type="text/css">
+    <link href='{%static "AmazeUI-2.4.2/assets/css/amazeui.css" %}' rel="stylesheet" type="text/css">
+    <link href='{%static "basic/css/demo.css"%}' rel="stylesheet" type="text/css" />
+
+    <link href='{%static "css/hmstyle.css"%}' rel="stylesheet" type="text/css" />
+    <link href='{%static "css/skim.css"%}' rel="stylesheet" type="text/css" />
+    <!-- <link href='{%static "css/personal.css" %}' rel="stylesheet" type="text/css"> -->
+
+    <script src='{%static "AmazeUI-2.4.2/assets/js/jquery.min.js" %}' type="text/javascript"></script>
+    <script src='{%static "AmazeUI-2.4.2/assets/js/amazeui.js" %}' type="text/javascript"></script>
+
+</head>
+
+<body>
+    <div class="hmtop">
+        <!--顶部导航条 -->
+        <div class="am-container header">
+            <!-- <ul class="message-l">
+                <div class="topMessage">
+                    <div class="menu-hd">
+                        <a href="#" target="_top" class="h">同学，请登录</a>
+                        <a href="#" target="_top">免费注册</a>
+                    </div>
+                </div>
+            </ul> -->
+            <ul class="message-r">
+                <div class="topMessage market">
+                    <div class="menu-hd"><a href='/market/mall/sort' target="_top" class="h"><i
+                                class="am-icon-shopping-bag am-icon-fw"></i>商品分类</a></div>
+                </div>
+                <div class="topMessage homepage">
+                    <div class="menu-hd"><a href='/market/user/index' target="_top"><i
+                                class="am-icon-user am-icon-fw"></i>个人中心</a></div>
+                </div>
+                <div class="topMessage community">
+                    <div class="menu-hd"><a id="mc-menu-hd" href='/market/community/groups' target="_top"><i
+                                class="am-icon-users  am-icon-fw"></i>社区动态</a></div>
+                </div>
+            </ul>
+        </div>
+
+        <!--悬浮搜索框-->
+
+        <div class="nav white">
+            <div class="logoBig">
+                <li><img src='{% static "images/logobig.png" %}' /></li>
+            </div>
+
+            <div class="search-bar pr">
+                <a name="index_none_header_sysc" href="#"></a>
+                <form>
+                    <input id="searchInput" name="index_none_header_sysc" type="text" placeholder="搜索"
+                        autocomplete="off">
+                    <input id="ai-topsearch" class="submit am-btn" value="搜索" index="1" type="submit">
+                </form>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+        <div class="am-container header">
+            <div class="banner">
+
+                <div class="am-slider am-slider-default scoll" data-am-flexslider id="demo-slider-0">
+                    <ul class="am-slides">
+                        <li class="banner1"><a href='/market/util/error'><img src='{%static "/images/ad1.jpg" %}' /></a>
+                        </li>
+                        <li class="banner2"><a><img src='{%static "/images/ad2.jpg" %}' /></a></li>
+                        <li class="banner3"><a><img src='{%static "/images/ad3.jpg" %}' /></a></li>
+                        <li class="banner4"><a><img src='{%static "/images/ad4.jpg" %}' /></a></li>
+
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+        </div>
+        <div class="shopNav">
+            <div class="slideall">
+            </div>
+        </div>
+        <div class="shopMainbg">
+            <div class="shopMain" id="shopmain">
+                <div id="f1">
+                    <!--新发布-->
+
+                    <div class="am-container ">
+                        <div class="shopTitle ">
+                            <h4>最新发布</h4>
+                            <h3>探索未知领域</h3>
+                            <div class="today-brands ">
+                                <!-- <a href="# ">平板</a>
+                                <a href="# ">奶皮酥</a>
+                                <a href="# ">栗子糕 </a>
+                                <a href="# ">马卡龙</a>
+                                <a href="# ">铜锣烧</a>
+                                <a href="# ">豌豆黄</a> -->
+                            </div>
+                            <span class="more ">
+                                <a href="# ">更多新品<i class="am-icon-angle-right" style="padding-left:10px ;"></i></a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="am-g am-g-fixed floodFour">
+                        <div class="am-u-sm-5 am-u-md-4 text-one list ">
+                            <div class="word">
+                                <a class="outer" href="#"><span class="inner"><b class="text">软件工程</b></span></a>
+                                <a class="outer" href="#"><span class="inner"><b class="text">数据结构</b></span></a>
+                                <a class="outer" href="#"><span class="inner"><b class="text">操作系统</b></span></a>
+                                <!-- <a class="outer" href="#"><span class="inner"><b class="text">核桃</b></span></a>
+                     ruanjiangcheng           <a class="outer" href="#"><span class="inner"><b class="text">核桃</b></span></a>
+                                <a class="outer" href="#"><span class="inner"><b class="text">核桃</b></span></a> -->
+                            </div>
+                            <a href="# ">
+                                <div class="outer-con ">
+                                    <div class="title ">
+                                        开抢啦！
+                                    </div>
+                                    <div class="sub-title ">
+                                        新书上架
+                                    </div>
+                                </div>
+                                <img src='{%static "/images/1.jpg" %}' />
+                            </a>
+                            <div class="triangle-topright"></div>
+                        </div>
+
+                        <div class="am-u-sm-7 am-u-md-4 text-two sug">
+                            <div class="outer-con ">
+                                <div class="title ">
+                                    雪之恋和风大福
+                                </div>
+                                <div class="sub-title ">
+                                    ¥13.8
+                                </div>
+                                <i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+                            </div>
+                            <a href="# "><img src='{%static "/images/5.jpg" %}' /></a>
+                        </div>
+
+                        <div class="am-u-sm-7 am-u-md-4 text-two">
+                            <div class="outer-con ">
+                                <div class="title ">
+                                    雪之恋和风大福
+                                </div>
+                                <div class="sub-title ">
+                                    ¥13.8
+                                </div>
+                                <i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+                            </div>
+                            <a href="# "><img src='{%static "/images/5.jpg" %}' /></a>
+                        </div>
+
+
+                        <div class="am-u-sm-3 am-u-md-2 text-three big">
+                            <div class="outer-con ">
+                                <div class="title ">
+                                    小优布丁
+                                </div>
+                                <div class="sub-title ">
+                                    ¥4.8
+                                </div>
+                                <i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+                            </div>
+                            <a href="# "><img src='{%static "/images/5.jpg" %}' /></a>
+                        </div>
+
+                        <div class="am-u-sm-3 am-u-md-2 text-three sug">
+                            <div class="outer-con ">
+                                <div class="title ">
+                                    小优布丁
+                                </div>
+                                <div class="sub-title ">
+                                    ¥4.8
+                                </div>
+                                <i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+                            </div>
+                            <a href="# "><img src='{%static "/images/5.jpg" %}' /></a>
+                        </div>
+
+                        <div class="am-u-sm-3 am-u-md-2 text-three ">
+                            <div class="outer-con ">
+                                <div class="title ">
+                                    小优布丁
+                                </div>
+                                <div class="sub-title ">
+                                    ¥4.8
+                                </div>
+                                <i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+                            </div>
+                            <a href="# "><img src='{%static "/images/5.jpg" %}' /></a>
+                        </div>
+
+                        <div class="am-u-sm-3 am-u-md-2 text-three last big ">
+                            <div class="outer-con ">
+                                <div class="title ">
+                                    小优布丁
+                                </div>
+                                <div class="sub-title ">
+                                    ¥4.8
+                                </div>
+                                <i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+                            </div>
+                            <a href="# "><img src='{%static "/images/5.jpg" %}' /></a>
+                        </div>
+
+                    </div>
+                    <div class="clear "></div>
+                </div>
+                <div id="f2">
+                    <!--新发布-->
+
+                    <div class="am-container ">
+                        <div class="shopTitle ">
+                            <h4>为你推荐</h4>
+                            <h3>个性化定制</h3>
+                            <div class="today-brands ">
+                                <!-- <a href="# ">平板</a>
+                                                <a href="# ">奶皮酥</a>
+                                                <a href="# ">栗子糕 </a>
+                                                <a href="# ">马卡龙</a>
+                                                <a href="# ">铜锣烧</a>
+                                                <a href="# ">豌豆黄</a> -->
+                            </div>
+                            <span class="more ">
+                                <a href="# ">更多好物<i class="am-icon-angle-right" style="padding-left:10px ;"></i></a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="am-g am-g-fixed floodFour">
+                        <div class="am-u-sm-5 am-u-md-4 text-one list ">
+                            <div class="word">
+                                <a class="outer" href="#"><span class="inner"><b class="text">软件工程</b></span></a>
+                                <a class="outer" href="#"><span class="inner"><b class="text">数据结构</b></span></a>
+                                <a class="outer" href="#"><span class="inner"><b class="text">操作系统</b></span></a>
+                                <!-- <a class="outer" href="#"><span class="inner"><b class="text">核桃</b></span></a>
+                                     ruanjiangcheng           <a class="outer" href="#"><span class="inner"><b class="text">核桃</b></span></a>
+                                                <a class="outer" href="#"><span class="inner"><b class="text">核桃</b></span></a> -->
+                            </div>
+                            <a href="# ">
+                                <div class="outer-con ">
+                                    <div class="title ">
+                                        开抢啦！
+                                    </div>
+                                    <div class="sub-title ">
+                                        新书上架
+                                    </div>
+                                </div>
+                                <img src='{%static "/images/1.jpg" %}' />
+                            </a>
+                            <div class="triangle-topright"></div>
+                        </div>
+
+                        <div class="am-u-sm-7 am-u-md-4 text-two sug">
+                            <div class="outer-con ">
+                                <div class="title ">
+                                    雪之恋和风大福
+                                </div>
+                                <div class="sub-title ">
+                                    ¥13.8
+                                </div>
+                                <i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+                            </div>
+                            <a href="# "><img src='{%static "/images/5.jpg" %}' /></a>
+                        </div>
+
+                        <div class="am-u-sm-7 am-u-md-4 text-two">
+                            <div class="outer-con ">
+                                <div class="title ">
+                                    雪之恋和风大福
+                                </div>
+                                <div class="sub-title ">
+                                    ¥13.8
+                                </div>
+                                <i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+                            </div>
+                            <a href="# "><img src='{%static "/images/5.jpg" %}' /></a>
+                        </div>
+
+
+                        <div class="am-u-sm-3 am-u-md-2 text-three big">
+                            <div class="outer-con ">
+                                <div class="title ">
+                                    小优布丁
+                                </div>
+                                <div class="sub-title ">
+                                    ¥4.8
+                                </div>
+                                <i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+                            </div>
+                            <a href="# "><img src='{%static "/images/5.jpg" %}' /></a>
+                        </div>
+
+                        <div class="am-u-sm-3 am-u-md-2 text-three sug">
+                            <div class="outer-con ">
+                                <div class="title ">
+                                    小优布丁
+                                </div>
+                                <div class="sub-title ">
+                                    ¥4.8
+                                </div>
+                                <i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+                            </div>
+                            <a href="# "><img src='{%static "/images/5.jpg" %}' /></a>
+                        </div>
+
+                        <div class="am-u-sm-3 am-u-md-2 text-three ">
+                            <div class="outer-con ">
+                                <div class="title ">
+                                    小优布丁
+                                </div>
+                                <div class="sub-title ">
+                                    ¥4.8
+                                </div>
+                                <i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+                            </div>
+                            <a href="# "><img src='{%static "/images/5.jpg" %}' /></a>
+                        </div>
+
+                        <div class="am-u-sm-3 am-u-md-2 text-three last big ">
+                            <div class="outer-con ">
+                                <div class="title ">
+                                    小优布丁
+                                </div>
+                                <div class="sub-title ">
+                                    ¥4.8
+                                </div>
+                                <i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+                            </div>
+                            <a href="# "><img src='{%static "/images/5.jpg" %}' /></a>
+                        </div>
+
+                    </div>
+                    <div class="clear "></div>
+                </div>
+
+                <!--底部-->
+                <div class="footer">
+                    <div class="footer-bd">
+                        <p>
+                            <em>© SJTU 软件工程 6.2小组 版权所有</em>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
