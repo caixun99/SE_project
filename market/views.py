@@ -19,8 +19,24 @@ def error(request):
     return render(request, "market/util/error.html")
 
 
-def index(request):
-    return render(request, "market/user/index.html")
+def profile(request):
+    return render(request, "market/user/profile.html")
+
+
+def article(request):
+    return render(request, "market/user/article.html")
+
+
+def sell(request):
+    return render(request, "market/user/sell.html")
+
+
+def community(request):
+    return render(request, "market/user/community.html")
+
+
+def buy(request):
+    return render(request, "market/user/buy.html")
 
 
 def groups(request):
