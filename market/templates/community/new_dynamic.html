@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% extends "community/base.html" %}
+    {% load bootstrap3 %}
+    {% block header %}
+        <h2>发布动态:</h2>
+    {% endblock header %}
+    {% block content %}
+        <form action="{% url 'market:new_dynamic' kinds.id %}" method="post" enctype="multipart/form-data" class="form">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            {% buttons %}
+                <button name="submit" class="btn btn-primary">确认发布</button>
+            {% endbuttons %}
+        </form>
+    {% endblock content %}
+</body>
+</html>

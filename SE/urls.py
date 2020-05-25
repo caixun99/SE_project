@@ -17,10 +17,11 @@ from django.conf import settings
 from django.conf.urls import include
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,re_path
 
 urlpatterns = [
-    path('market/', include('market.urls')),
+    re_path(r'', include(('market.urls','market'),namespace='market')),
+    re_path(r'^users', include(('users.urls','users'),namespace='users')),
     path('admin/', admin.site.urls),
 ] + static(
     settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% extends "community/base.html" %}
+    {% block content %}
+        <p><a href="{% url 'market:dynamic' dynamic.id %}">{{ dynamic }}</a></p>
+        <p>编辑评论:</p>
+        <form action="{% url 'market:edit_comment' comment.id %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button name="submit">保存编辑</button>
+        </form>
+    {% endblock content %}
+</body>
+</html>

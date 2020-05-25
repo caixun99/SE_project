@@ -1,0 +1,8 @@
+{% extends "market/base.html" %}
+{% load static %}
+{% block 主体 %}
+{% for case in all_products %}
+{{case.name}} <br>
+<img src="{{case.image.url}}" alt="image"> <br>
+{% endfor %}
+{% endblock 主体 %}

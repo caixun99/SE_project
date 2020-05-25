@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang='zh-hans'>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 优化搜索引擎 ？ -->
+    <meta name="keywords" content="{% block 关键词%}toy{% endblock 关键词 %}">
+    <meta name="description" content="{% block 网页描述%}clone of market page{% endblock 网页描述 %}">
+    <title>{% block 网页标题%}商城主页{% endblock 网页标题 %}</title>
+</head>
+
+<body>
+    {% include "market/header.html" %}
+    {% include "market/nav.html" %}
+
+    <main>
+        {% block 主体 %}
+        网页主体
+        {% endblock 主体 %}
+    </main>
+    {% include "market/footer.html" %}
+</body>
+
+</html>

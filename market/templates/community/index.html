@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% extends "community/base.html" %}
+    {% block header %}
+        <div class="jumbotron">
+            <h1 align="center">社区交流主页</h1>
+        </div>
+    {% endblock header %}
+    {% block content %}
+        <h2>
+            <a href="{% url 'users:register' %}">注册一个账号</a>
+            ,从而让你的购物和生活更加便利。
+        </h2>
+        <h2>
+            在这里，你可以记录下你推荐的商品，也可以搜索你感兴趣的话题。
+        </h2>
+    {% endblock content %}
+</body>
+</html>

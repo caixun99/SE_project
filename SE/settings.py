@@ -14,7 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-print(BASE_DIR)
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
@@ -23,15 +23,26 @@ SECRET_KEY = 'o^_s%ag^z8(xmw(-8arjr6a9yc34=7ph6sh1!t7o5it=vth7gi'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+#登录操作
+LOGIN_URL = '/users/login/'
 
 ALLOWED_HOSTS = []
 
+BOOTSTRAP3 = {
+    'include_jquery':True,
+}
 # Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin', 'django.contrib.auth',
     'django.contrib.contenttypes', 'django.contrib.sessions',
-    'django.contrib.messages', 'django.contrib.staticfiles', 'market'
+    'django.contrib.messages', 'django.contrib.staticfiles',
+    #样式
+    'bootstrap3',
+    #My apps
+    'market',
+    'users',
+    'community',
 ]
 
 MIDDLEWARE = [
@@ -49,6 +60,7 @@ ROOT_URLCONF = 'SE.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

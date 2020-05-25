@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% extends "community/base.html" %}
+    {% load bootstrap3 %}
+
+    {% block header %}
+        <h1>社区列表</h1>
+    {% endblock header %}
+    {% block content %}
+
+        <ul>
+            {% for kind in kinds %}
+                <li>
+                    <h4>
+                        <a href="{% url 'market:dynamics' kind.id %}">{{ kind }}</a>
+                    </h4>
+                </li>
+            {% empty %}
+                <li>还没有添加任何社区哦</li>
+            {% endfor %}
+        </ul>
+    {% endblock content %}
+</body>
+</html>

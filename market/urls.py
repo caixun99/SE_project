@@ -1,16 +1,15 @@
-from django.urls import path
+from django.urls import path,re_path
 
 from . import views
 
 app_name = 'market'
 urlpatterns = [
-    path('mall/home/', views.home, name='home'),
-    path('mall/sort/', views.sort, name='sort'),
-    path('util/error/', views.error, name='error'),
-    path('user/profile/', views.profile, name='profile'),
-    path('user/article/', views.article, name='article'),
-    path('user/community/', views.community, name='community'),
-    path('user/buy/', views.buy, name='buy'),
-    path('user/sell/', views.sell, name='sell'),
-    path('community/groups/', views.groups, name='groups'),
+    #re_path(r'^category/(\d+)/$',views.category,name='category'),
+    re_path(r'^community//$',views.community,name='community'),
+    re_path(r'^dynamics/(?P<dynamic_id>\d+)/$',views.dynamic,name='dynamic'),
+    re_path(r'^community/(?P<kind_id>\d+)/$',views.dynamics,name='dynamics'),
+    re_path(r'^new_dynamic/(?P<kind_id>\d+)$',views.new_dynamic,name='new_dynamic'),
+    re_path(r'^new_comment/(?P<dynamic_id>\d+)/$',views.new_comment,name='new_comment'),
+    re_path(r'^edit_comment/(?P<comment_id>\d+)/$',views.edit_comment,name='edit_comment'),
+    path('',views.index,name='index'),
 ]

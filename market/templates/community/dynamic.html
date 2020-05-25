@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% extends 'community/base.html' %}
+    {% load bootstrap3 %}
+    {% block header %}
+        <h3>{{ dynamic.title }}</h3>
+        <h4>{{ dynamic.content }}</h4>
+    {% endblock header %}
+    {% block content %}
+
+        <p>
+            <a href="{% url 'market:new_comment' dynamic.id %}">添加评论</a>
+        </p>
+        <ul>
+        {% for comment in comments %}
+            <div class="panel-heading">
+            <h3>
+                {{ comment.date_added|date:'M d,Y H:i' }}
+                <small>
+                    <a href="{% url 'market:edit_comment' comment.id %}">
+                        编辑评论
+                    </a>
+
+                </small>
+            </h3>
+            </div>
+            <div class="panel-body">
+                {{ comment.content|linebreaks }}
+            </div>
+        {% empty %}
+            <li>
+                还没有任何评论哦。
+            </li>
+        {% endfor %}
+        </ul>
+    {% endblock content %}
+</body>
+</html>
